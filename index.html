@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      margin: 15px 0;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #3498db;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <p>Welcome to my personal website</p>
+  </header>
+
+  <nav>
+    <a href="#cv">CV</a>
+    <a href="#ppt">PPT Files</a>
+    <a href="#powerbi">Power BI</a>
+    <a href="#data">Data Files</a>
+  </nav>
+
+  <section id="cv">
+    <h2>My CV</h2>
+    <div class="card">
+      <p>Click below to view or download my CV.</p>
+      <a href="cv.pdf" class="btn" target="_blank">View CV</a>
+    </div>
+  </section>
+
+  <section id="ppt">
+    <h2>PPT Files</h2>
+    <div class="card">
+      <p>Here are my presentation files.</p>
+      <a href="sample-presentation.pptx" class="btn" target="_blank">Download PPT</a>
+    </div>
+  </section>
+
+  <section id="powerbi">
+    <h2>Power BI Dashboard</h2>
+    <div class="card">
+      <p>Embedded Power BI Report:</p>
+      <!-- Replace the src link below with your Power BI "Publish to web" link -->
+      <iframe title="Power BI Report" width="100%" height="500" src="https://app.powerbi.com/view?r=YOUR_REPORT_LINK" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+  </section>
+
+  <section id="data">
+    <h2>Data Files</h2>
+    <div class="card">
+      <p>Download my data files (Excel/CSV).</p>
+      <a href="data-file.xlsx" class="btn" target="_blank">Download Excel</a>
+      <a href="data-file.csv" class="btn" target="_blank">Download CSV</a>
+    </div>
+  </section>
+</body>
+</html>
