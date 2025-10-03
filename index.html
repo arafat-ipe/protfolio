@@ -48,6 +48,9 @@
     padding:10px 16px;
     border-radius:999px;
     background:transparent;
+    text-decoration:none;
+    color:var(--accent);
+    font-weight:600;
   }
 
   /* Hero layout */
@@ -189,19 +192,18 @@
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
     </nav>
-    <div class="cta">Contact</div>
+    <a href="#contact" class="cta">Contact</a>
   </header>
 
   <main class="hero" id="home">
     <!-- LEFT: portrait / blob -->
    <div class="portrait-wrap" aria-hidden="true">
-  <div class="blob" role="img" aria-label="Decorative portrait background">
-    <figure class="photo">
-      <img src="arafat_photo.png" alt="Portrait of Md. Arafat Hussain" />
-    </figure>
-  </div>
-</div>
-
+      <div class="blob" role="img" aria-label="Decorative portrait background">
+        <figure class="photo">
+          <img src="arafat_photo.png" alt="Portrait of Md. Arafat Hussain" />
+        </figure>
+      </div>
+    </div>
 
     <!-- RIGHT: text -->
     <section class="hero-content">
@@ -210,49 +212,57 @@
       <div class="sub">Industrial engineer • Business Analyst • Lean & ERP Expert</div>
 
       <p class="lead">
-Md. Arafat Hussain is an Industrial & Production Engineer with an MBA and PGD in Supply Chain Management. He specializes in industrial engineering, business analysis, Lean manufacturing, and ERP systems, helping organizations improve efficiency, reduce waste, and achieve operational excellence.
+        Md. Arafat Hussain is an Industrial & Production Engineer with an MBA and PGD in Supply Chain Management. 
+        He specializes in industrial engineering, business analysis, Lean manufacturing, and ERP systems, helping organizations 
+        improve efficiency, reduce waste, and achieve operational excellence.
       </p>
 
       <div class="socials" aria-label="Social links">
-        <!-- simple SVG icons -->
         <a href="#" title="Dribbble" aria-label="Dribbble">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#6b6b6b" stroke-width="1.2"/><path d="M4 15c3-1.5 6-2 12-1" stroke="#6b6b6b" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" stroke="#6b6b6b" stroke-width="1.2"/>
+            <path d="M4 15c3-1.5 6-2 12-1" stroke="#6b6b6b" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
         </a>
         <a href="#" title="GitHub" aria-label="GitHub">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 .5C5.7.5.9 5.3.9 11.7c0 4.6 3 8.5 7.2 9.9.5.1.7-.2.7-.5v-1.9c-2.9.6-3.6-1.3-3.6-1.3-.5-1.3-1.3-1.6-1.3-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.8.7 2.4 1.2.1-.9.4-1.5.7-1.8-2.3-.3-4.7-1.2-4.7-5.3 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 3 .9.9-.3 2-.5 3-.5s2.1.2 3 .5c2.1-1.2 3-.9 3-.9.6 1.4.2 2.5.1 2.8.7.8 1.1 1.8 1.1 3 0 4.1-2.5 5-4.7 5.3.4.4.7 1 .7 2v3c0 .3.2.6.7.5 4.2-1.4 7.2-5.3 7.2-9.9C23.1 5.3 18.3.5 12 .5z" stroke="#6b6b6b" stroke-width="0.4" fill="none"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 .5C5.7.5.9 5.3.9 11.7c0 4.6 3 8.5 7.2 9.9.5.1.7-.2.7-.5v-1.9c-2.9.6-3.6-1.3-3.6-1.3-.5-1.3-1.3-1.6-1.3-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.8.7 2.4 1.2.1-.9.4-1.5.7-1.8-2.3-.3-4.7-1.2-4.7-5.3 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 3 .9.9-.3 2-.5 3-.5s2.1.2 3 .5c2.1-1.2 3-.9 3-.9.6 1.4.2 2.5.1 2.8.7.8 1.1 1.8 1.1 3 0 4.1-2.5 5-4.7 5.3.4.4.7 1 .7 2v3c0 .3.2.6.7.5 4.2-1.4 7.2-5.3 7.2-9.9C23.1 5.3 18.3.5 12 .5z" fill="#6b6b6b"/>
+          </svg>
         </a>
         <a href="#" title="LinkedIn" aria-label="LinkedIn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#6b6b6b" stroke-width="1"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 2-2h0" stroke="#6b6b6b" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2" stroke="#6b6b6b" stroke-width="1"/>
+            <path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 2-2h0" stroke="#6b6b6b" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </a>
         <a href="#" title="Mail" aria-label="Email">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2" stroke="#6b6b6b" stroke-width="1.2"/><path d="M4 7l8 6 8-6" stroke="#6b6b6b" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="2.5" y="4.5" width="19" height="15" rx="2" stroke="#6b6b6b" stroke-width="1.2"/>
+            <path d="M4 7l8 6 8-6" stroke="#6b6b6b" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </a>
       </div>
 
       <div class="actions">
-  <!-- Download CV button -->
-  <a class="btn-primary" href="cv_arafat.pdf" download>
-    <!-- small download icon -->
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="opacity:.95">
-      <path d="M12 3v12" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-      <path d="M8 11l4 4 4-4" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      <rect x="4" y="17" width="16" height="3" rx="1" fill="rgba(0,0,0,0.06)"/>
-    </svg>
-    Download CV
-  </a>
+        <!-- Download CV button -->
+        <a class="btn-primary" href="cv_arafat.pdf" download>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="opacity:.95">
+            <path d="M12 3v12" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M8 11l4 4 4-4" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="4" y="17" width="16" height="3" rx="1" fill="rgba(0,0,0,0.06)"/>
+          </svg>
+          Download CV
+        </a>
 
-  <!-- View CV button -->
-  <a class="btn-ghost" href="cv_arafat.pdf" target="_blank">View CV</a>
-</div>
-
+        <!-- View CV button -->
+        <a class="btn-ghost" href="cv_arafat.pdf" target="_blank">View CV</a>
+      </div>
     </section>
   </main>
 
-  <!-- Small accessible footer or note -->
+  <!-- Footer -->
   <footer style="max-width:var(--container); margin:40px auto 10px; color:var(--muted); font-size:13px; text-align:center;">
-    Replace the portrait and texts with your own. Designed to be responsive.
+    © 2025 Md. Arafat Hussain — Portfolio Website
   </footer>
 </body>
 </html>
-
-
