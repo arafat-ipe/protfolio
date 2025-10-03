@@ -1,128 +1,250 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f9;
-      color: #333;
-    }
-    header {
-      background: #2c3e50;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      margin: 15px 0;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #2c3e50;
-      font-weight: bold;
-    }
-    section {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #2c3e50;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 10px;
-    }
-    .card {
-      background: #fff;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #3498db;
-      color: #fff;
-      border-radius: 5px;
-      text-decoration: none;
-      margin-top: 10px;
-    }
-    .btn:hover {
-      background: #2980b9;
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Portfolio — Amelia-style Hero</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#f7efe6;
+    --accent:#a07c2d; /* gold-ish accent */
+    --muted:#6b6b6b;
+    --card:#fff;
+    --shadow: 0 8px 30px rgba(20,20,20,0.08);
+    --radius:24px;
+    --container:1200px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+    background: linear-gradient(90deg, var(--bg) 0%, #f3ece2 100%);
+    color:#111;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    padding:36px 20px;
+  }
+
+  /* Top nav */
+  header{
+    max-width:var(--container);
+    margin:0 auto 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+  }
+  .logo{font-weight:700; color:var(--accent); font-size:20px}
+  nav{display:flex; gap:18px; align-items:center; font-weight:500; color:var(--muted)}
+  nav a{text-decoration:none; color:inherit; font-size:15px; opacity:.9}
+  .cta{
+    border:2px solid rgba(0,0,0,0.08);
+    padding:10px 16px;
+    border-radius:999px;
+    background:transparent;
+  }
+
+  /* Hero layout */
+  .hero{
+    max-width:var(--container);
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:40px;
+    align-items:center;
+    min-height:68vh;
+  }
+
+  /* Left portrait card with layered shapes */
+  .portrait-wrap{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+  }
+
+  /* outer irregular blob */
+  .blob{
+    width:370px;
+    height:430px;
+    position:relative;
+    border-radius:50% 50% 48% 52% / 45% 40% 60% 55%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.65), rgba(240,235,230,0.9));
+    box-shadow: var(--shadow);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transform:translateX(10%);
+  }
+
+  /* thin outline */
+  .blob::after{
+    content:"";
+    position:absolute;
+    inset:6px;
+    border-radius:inherit;
+    border:3px solid rgba(0,0,0,0.07);
+    mix-blend-mode:multiply;
+  }
+
+  /* photo circle inside */
+  .photo{
+    width:80%;
+    height:78%;
+    border-radius:50%;
+    overflow:hidden;
+    display:block;
+    box-shadow: 0 12px 30px rgba(10,10,10,0.08);
+    background: #eee;
+  }
+  .photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transform:translateY(2%);
+  }
+
+  /* Right content */
+  .hero-content{
+    padding:18px 8px;
+  }
+  .eyebrow{font-weight:600; color:var(--muted); margin-bottom:10px}
+  h1{
+    margin:0;
+    font-size:42px;
+    line-height:1.03;
+    font-weight:800;
+    letter-spacing:-0.6px;
+  }
+  .accent{color:var(--accent)}
+  .sub{font-size:20px; color:var(--muted); margin-top:12px; font-weight:600}
+  p.lead{color:#5c5c5c; margin-top:16px; max-width:520px; line-height:1.6}
+  .socials{display:flex; gap:12px; margin-top:22px; align-items:center}
+  .socials a{
+    display:inline-flex;
+    width:44px;
+    height:44px;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+    border:1px solid rgba(0,0,0,0.06);
+    background:transparent;
+    text-decoration:none;
+  }
+
+  .actions{margin-top:24px; display:flex; gap:14px; align-items:center}
+  .btn-primary{
+    background:linear-gradient(180deg, var(--accent), #7c5b19);
+    color:white;
+    padding:12px 22px;
+    border-radius:12px;
+    border:none;
+    font-weight:700;
+    box-shadow: 0 8px 20px rgba(160,124,45,0.18);
+    cursor:pointer;
+    text-decoration:none;
+    display:inline-flex;
+    gap:10px;
+    align-items:center;
+  }
+  .btn-ghost{
+    background:transparent;
+    border:1px solid rgba(0,0,0,0.06);
+    padding:10px 16px;
+    border-radius:10px;
+    color:var(--muted);
+    text-decoration:none;
+  }
+
+  /* Responsive */
+  @media (max-width:900px){
+    .hero{ grid-template-columns: 1fr; gap:28px; padding-bottom:30px; }
+    header{padding-bottom:6px}
+    .blob{width:300px; height:360px}
+    h1{font-size:34px}
+    .portrait-wrap{justify-content:center}
+  }
+  @media (max-width:420px){
+    body{ padding:20px 14px;}
+    .blob{width:260px;height:300px}
+    h1{font-size:28px}
+  }
+</style>
 </head>
 <body>
   <header>
-    <h1>MD ARAFAT HUSSAIN</h1>
-    <p>Operatonal Excellence Analyst</p>
+    <div class="logo">Amelia</div>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#blog">Blog</a>
+    </nav>
+    <div class="cta">Contact</div>
   </header>
 
-  <nav>
-    <a href="#cv">CV</a>
-    <a href="#ppt">PPT Files</a>
-    <a href="#powerbi">Power BI</a>
-    <a href="#data">Data Files</a>
-  </nav>
+  <main class="hero" id="home">
+    <!-- LEFT: portrait / blob -->
+    <div class="portrait-wrap" aria-hidden="true">
+      <div class="blob" role="img" aria-label="Decorative portrait background">
+        <figure class="photo">
+          <!-- Replace the src below with your own photo. Keep similar aspect ratio for best result. -->
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=000000" alt="Portrait of Amelia (replace with your photo)">
+        </figure>
+      </div>
+    </div>
 
-<section id="cv">
-  <h2>My CV</h2>
-  <div class="card" style="display: flex; align-items: center; gap: 20px;">
-    <!-- Photo -->
-    <img src="arafat_photo.png" alt="MD Arafat Hussain" style="width:120px; height:auto; border-radius:5px;">
+    <!-- RIGHT: text -->
+    <section class="hero-content">
+      <div class="eyebrow">Hey I’m <span class="accent">Amelia</span></div>
+      <h1>I'm a <span class="accent">Developer</span></h1>
+      <div class="sub">UI / Frontend engineer • React • HTML & CSS</div>
 
-    <!-- Resume Header Info -->
-    <div>
-      <h3 style="margin:0; color:#1e2b6f;">MD ARAFAT HUSSAIN</h3>
-      <p style="margin:2px 0; color: #555;">Supply Chain & ERP Specialist</p>
-      <p style="margin:2px 0; color: #1e2b6f;">
-        Sreepur, Ashulia, 1340 Dhaka | +08801943758370 | arafat.ipe18@gmail.com
+      <p class="lead">
+        I craft clean, accessible user interfaces and delightful experiences. I enjoy turning design ideas into polished, performant web apps and learning new tools every day.
       </p>
-      <!-- View CV Button -->
-      <a href="cv_arafat.pdf" class="btn" target="_blank">📄 View CV</a>
-    </div>
-  </div>
-</section>
 
+      <div class="socials" aria-label="Social links">
+        <!-- simple SVG icons -->
+        <a href="#" title="Dribbble" aria-label="Dribbble">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#6b6b6b" stroke-width="1.2"/><path d="M4 15c3-1.5 6-2 12-1" stroke="#6b6b6b" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </a>
+        <a href="#" title="GitHub" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 .5C5.7.5.9 5.3.9 11.7c0 4.6 3 8.5 7.2 9.9.5.1.7-.2.7-.5v-1.9c-2.9.6-3.6-1.3-3.6-1.3-.5-1.3-1.3-1.6-1.3-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.8.7 2.4 1.2.1-.9.4-1.5.7-1.8-2.3-.3-4.7-1.2-4.7-5.3 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 3 .9.9-.3 2-.5 3-.5s2.1.2 3 .5c2.1-1.2 3-.9 3-.9.6 1.4.2 2.5.1 2.8.7.8 1.1 1.8 1.1 3 0 4.1-2.5 5-4.7 5.3.4.4.7 1 .7 2v3c0 .3.2.6.7.5 4.2-1.4 7.2-5.3 7.2-9.9C23.1 5.3 18.3.5 12 .5z" stroke="#6b6b6b" stroke-width="0.4" fill="none"/></svg>
+        </a>
+        <a href="#" title="LinkedIn" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#6b6b6b" stroke-width="1"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 2-2h0" stroke="#6b6b6b" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#" title="Mail" aria-label="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2" stroke="#6b6b6b" stroke-width="1.2"/><path d="M4 7l8 6 8-6" stroke="#6b6b6b" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
 
-  <section id="ppt">
-    <h2>PPT Files</h2>
-    <div class="card">
-      <p>Here are my presentation files.</p>
-      <a href="sample-presentation.pptx" class="btn" target="_blank">Download PPT</a>
-    </div>
-  </section>
+      <div class="actions">
+        <!-- Download button: replace href with actual CV URL or use a file link -->
+        <a class="btn-primary" href="/files/Amelia_CV.pdf" download>
+          <!-- small download icon -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="opacity:.95"><path d="M12 3v12" stroke="white" stroke-width="1.6" stroke-linecap="round"/><path d="M8 11l4 4 4-4" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="17" width="16" height="3" rx="1" fill="rgba(0,0,0,0.06)"/></svg>
+          Download CV
+        </a>
 
-  <section id="powerbi">
-    <h2>Power BI Dashboard</h2>
-    <div class="card">
-      <p>Embedded Power BI Report:</p>
-      <!-- Replace the src link below with your Power BI "Publish to web" link -->
-      <iframe title="Power BI Report" width="100%" height="500" src="https://app.powerbi.com/view?r=YOUR_REPORT_LINK" frameborder="0" allowFullScreen="true"></iframe>
-    </div>
-  </section>
+        <a class="btn-ghost" href="#contact">Let's talk</a>
+      </div>
+    </section>
+  </main>
 
-  <section id="data">
-    <h2>Data Files</h2>
-    <div class="card">
-      <p>Download my data files (Excel/CSV).</p>
-      <a href="data-file.xlsx" class="btn" target="_blank">Download Excel</a>
-      <a href="data-file.csv" class="btn" target="_blank">Download CSV</a>
-    </div>
-  </section>
+  <!-- Small accessible footer or note -->
+  <footer style="max-width:var(--container); margin:40px auto 10px; color:var(--muted); font-size:13px; text-align:center;">
+    Replace the portrait and texts with your own. Designed to be responsive.
+  </footer>
 </body>
-
 </html>
-
-
-
-
-
-
