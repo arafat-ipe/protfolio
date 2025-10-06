@@ -143,7 +143,7 @@
     background-color:#0e223a;
     color:#e0f7fa;
     padding:50px 20px;
-    margin-bottom:20px; /* reduced space below About */
+    margin-bottom:20px;
   }
   #about h2{
     font-size:28px;
@@ -160,6 +160,7 @@
     max-width:900px;
     margin-left:auto;
     margin-right:auto;
+    text-align:justify;
   }
 
   /* Skills Section */
@@ -167,7 +168,7 @@
     background-color:#132b45;
     color:white;
     padding:50px 20px;
-    margin-top:0; /* removed top gap above Skills */
+    margin-top:0;
   }
   .skills-container{
     max-width:var(--container);
@@ -242,6 +243,74 @@
     color:#00bcd4;
   }
   .label{text-align:center;margin-top:10px;}
+
+  /* Experience & Education Section */
+  #experience, #education {
+    background-color:#0e223a;
+    padding:50px 20px;
+    margin-top:0;
+  }
+  #experience h2, #education h2 {
+    text-align:center;
+    color:#00bcd4;
+    margin-bottom:50px;
+    font-size:28px;
+  }
+  .section-box {
+    max-width:var(--container);
+    margin:0 auto 60px;
+    background:#132b45;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,188,212,0.3);
+  }
+  .timeline {
+    position:relative;
+    margin-left:20px;
+    border-left:2px solid #00bcd4;
+    padding-left:30px;
+  }
+  .timeline-item {
+    position:relative;
+    margin-bottom:30px;
+  }
+  .timeline-item::before {
+    content:'';
+    position:absolute;
+    left:-12px;
+    top:5px;
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    background-color:#00bcd4;
+  }
+  .timeline-item h3 {
+    color:#00bcd4;
+    font-size:18px;
+    margin-bottom:5px;
+  }
+  .timeline-item h4 {
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:5px;
+  }
+  .timeline-item p {
+    color:#ccc;
+    font-size:14px;
+    margin:0;
+    text-align:justify;
+  }
+  .timeline-item span {
+    font-size:13px;
+    color:#aaa;
+    display:block;
+    margin-bottom:10px;
+  }
+  .cgpa {
+    color:#00ffcc;
+    font-weight:600;
+    margin-top:5px;
+  }
 
   /* Footer */
   footer{
@@ -325,7 +394,6 @@
         <div class="skill"><div class="skill-name"><span>Microsoft Excel</span><span>95%</span></div><div class="progress-bar"><div class="progress" style="--width:95%;"></div></div></div>
         <div class="skill"><div class="skill-name"><span>Microsoft Powerpoint</span><span>99%</span></div><div class="progress-bar"><div class="progress" style="--width:99%;"></div></div></div>
         <div class="skill"><div class="skill-name"><span>SQL</span><span>65%</span></div><div class="progress-bar"><div class="progress" style="--width:65%;"></div></div></div>
-        
       </div>
 
       <div class="professional">
@@ -336,6 +404,99 @@
           <div><div class="circle" style="--percent:300deg;"><span>85%</span></div><div class="label">Communication</div></div>
           <div><div class="circle" style="--percent:285deg;"><span>80%</span></div><div class="label">Problem Solving</div></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2>My <span class="accent">Experience</span></h2>
+    <div class="section-box">
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Assistant Manager – Business Analyst</h3>
+          <h4>Mondol Group</h4>
+          <span>Jan 2022 – Present</span>
+          <p>01. Data-Driven Supply Chain Control: Designed SQL & Power BI dashboards to monitor material
+availability, stock variance, wastage control, and production-phase consumption to support
+accurate and timely decision-making.</p>
+            <p>02. ERP & Digital Integration: Implemented Logic ERP across 6 group companies, eliminating
+manual challans and Excel reports by digitizing material issuance, tracking, and reporting. Deployed
+850+ tablets on production floors for live material tracking and trained 1,250+ ERP users.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Sr. Officer- Industrial Engineer (IE), Lean Manufacturing & Continuous Improvement</h3>                                                                                                            </h3>
+          <h4>FCI BD Ltd.(DEPZ, Savar)</h4>
+          <span>Jan 2020 – Jan 2022</span>
+          <p>•	Implemented QCO, Kaizen, OT Reduction & Helper Reduction initiatives</p>
+          <p>•	Deployed 5S, Six Sigma, TPM, TQM to enhance efficiency and eliminate waste</p>
+          <p>•	Developed Operation Bulletins (OB) with SMV, standard time, and process breakdown</p>
+          <p>•	Conducted capacity, method, and production studies to improve productivity</p>
+          <p>•	Delivered pre-setting requirements (folders, jig, gauge) 5 days before layout</p>
+          <p>•	Provided training on critical operations and ensured SOP development</p>
+          <p>•	Prepared balanced OB and machine layout in coordination with line teams</p>
+        </div>
+
+              <div class="timeline-item">
+          <h3>Executive-Industrial Engineer (IE) Department</h3>                                                                                                            </h3>
+          <h4>Interstoff Apparels Limited. (Kaliakoir, Gazipur)</h4>
+          <span>May 2018 – Dec 2020</span>
+          <p>•	Developed machine layouts and addressed quality/technical issues pre-production</p>
+          <p>•	Tracked daily efficiency, WIP, NPT, absenteeism, and manpower balance</p>
+          <p>•	Identified bottlenecks and provided training for critical operations</p>
+          <p>•	Coordinated with cross-functional teams to ensure smooth style feeding</p>
+          <p>•	Created skill matrices to optimize operator utilization</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>My <span class="accent">Education</span></h2>
+    <div class="section-box">
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Master of Business Administration (MBA): Supply Chain Management (SCM)</h3>
+          <h4>Bangladesh University of Professionals (BUP)</h4>
+          <p class="cgpa">CGPA: 3.78 out of 4.00</p>
+          <span>2024 – 2026</span>
+          <p>Specialized in Supply chain Management, process optimization, Lean manufacturing, and operations management.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Post Graduate Diploma (PGD): Supply Chain Management (SCM)</h3>
+          <h4>Bangladesh Institute of Human Resource Management (BIHRM) </h4>
+          <p class="cgpa">CGPA: 3.52 out of 4.00</p>
+          <span>2019 – 2020</span>
+          <p>Specialized in Supply chain Management,operations management,commercial documentation process </p>
+        </div>
+
+          <div class="timeline-item">
+          <h3>B.Sc. in Industrial & Production Engineering (IPE)</h3>
+          <h4>Ahsanullah University of Science and Technology (AUST) </h4>
+          <p class="cgpa">CGPA: 3.01 out of 4.00</p>
+          <span>2014 – 2028</span>
+          <p>Specialized in process optimization, Lean manufacturing, and operations management.</p>  
+        </div>
+
+        <div class="timeline-item">
+          <h3>Higher Secondary Certificate Examination (HSC) </h3>
+          <h4>Keshabpur Bahrul Ulum Kamil Madrasha</h4>
+           <p class="cgpa">CGPA: 5.00 out of 5.00</p>
+          <span>2011 – 2013</span>
+          <p>Science group with a strong foundation in analytical and quantitative skills.</p>
+        </div>
+
+               <div class="timeline-item">
+          <h3>Secondary School Certificate Examination (SSC) </h3>
+          <h4>Keshabpur Bahrul Ulum Kamil Madrasha</h4>
+           <p class="cgpa">CGPA: 5.00 out of 5.00</p>
+          <span>2010 – 2011</span>
+          <p>Science group with a strong foundation in analytical and quantitative skills.</p>
+        </div>
+        
       </div>
     </div>
   </section>
@@ -354,5 +515,3 @@
   </script>
 </body>
 </html>
-
-
