@@ -119,7 +119,7 @@
   .accent{color:var(--accent)}
   .sub{font-size:20px; color:var(--muted); margin-top:12px; font-weight:600}
   p.lead{color:#d0d0d0; margin-top:16px; max-width:520px; line-height:1.6}
-  .actions{margin-top:24px; display:flex; gap:14px; align-items:center}
+  .actions{margin-top:24px; display:flex; gap:14px; align-items:center; flex-wrap:wrap}
   .btn-primary{
     background:linear-gradient(180deg, var(--accent), #0288a5);
     color:white;
@@ -136,6 +136,20 @@
     border-radius:10px;
     color:var(--muted);
     text-decoration:none;
+  }
+
+  /* Social Icons */
+  .social-icons a{
+    margin-right:12px;
+    display:inline-block;
+  }
+  .social-icons img{
+    width:32px;
+    height:32px;
+    transition:transform 0.2s;
+  }
+  .social-icons img:hover{
+    transform:scale(1.1);
   }
 
   /* About Section */
@@ -312,6 +326,40 @@
     margin-top:5px;
   }
 
+  /* Contact Section */
+  #contact{
+    background-color:#0e223a;
+    padding:50px 20px;
+  }
+  #contact h2{
+    text-align:center;
+    color:#00bcd4;
+    margin-bottom:40px;
+    font-size:28px;
+  }
+  #contact form{
+    max-width:600px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+  }
+  #contact input,#contact textarea{
+    padding:12px;
+    border-radius:8px;
+    border:none;
+    font-size:14px;
+  }
+  #contact button{
+    background:var(--accent);
+    color:white;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    font-weight:700;
+    cursor:pointer;
+  }
+
   /* Footer */
   footer{
     max-width:var(--container);
@@ -345,6 +393,7 @@
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
     </nav>
     <a href="#contact" class="cta">Contact</a>
   </header>
@@ -367,6 +416,20 @@
         Assistant Manager – Business Analyst in the Business Performance & Analytics department with a background in Industrial & Production Engineering, MBA, and PGD in Supply Chain Management. Skilled in industrial engineering, Lean manufacturing, business analysis, and ERP systems, focused on improving efficiency, reducing waste, and driving operational excellence.
       </p>
 
+      <!-- Social Icons -->
+      <div class="actions social-icons" style="margin-bottom:15px;">
+        <a href="https://www.facebook.com/share/16qn5n3PDq/" target="_blank">
+          <img src="Facebook_logo.png" alt="Facebook">
+        </a>
+        <a href="https://www.linkedin.com/in/md-arafat-hussain-782a15137" target="_blank">
+          <img src="Linkedin_logo.png" alt="LinkedIn">
+        </a>
+        <a href="mailto:arafat.ipe18@gmail.com">
+          <img src="Email_Logo.png" alt="Email">
+        </a>
+      </div>
+
+      <!-- CV Buttons -->
       <div class="actions">
         <a class="btn-primary" href="cv_arafat.pdf" download>Download CV</a>
         <a class="btn-ghost" href="cv_arafat.pdf" target="_blank">View CV</a>
@@ -374,7 +437,7 @@
     </section>
   </main>
 
-  <!-- About -->
+   <!-- About -->
   <section id="about">
     <h2>About Me</h2>
     <p>I am currently serving as <strong>Assistant Manager – Business Analyst</strong> in the <strong>Business Performance & Analytics department</strong>, where I focus on driving data-driven decision-making and operational improvements.</p>
@@ -501,6 +564,18 @@ manual challans and Excel reports by digitizing material issuance, tracking, and
     </div>
   </section>
 
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:arafat.ipe18@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
   <!-- Footer -->
   <footer>
     © 2025 Md. Arafat Hussain — Portfolio Website
@@ -515,4 +590,3 @@ manual challans and Excel reports by digitizing material issuance, tracking, and
   </script>
 </body>
 </html>
-
